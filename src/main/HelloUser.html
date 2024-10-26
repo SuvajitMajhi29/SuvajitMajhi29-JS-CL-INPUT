@@ -14,9 +14,15 @@
 <body>
     <h1 id="text">enter your name:</h1>
 
-    <input id="input">
+    <input id="input" type ="text">
 
-    <button id="submit">say hello</button>
+    <button id="submit" onclick="sayHello()">say hello</button>
+    <!-- <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="sayHello()">Say Hello</button> -->
+
+    <!-- <p id="outputText">Enter your name</p> -->
+    
     <br>
 
     <a href="https://www.w3schools.com/jsref/prop_text_value.asp">
@@ -42,6 +48,15 @@
          */
 
          // CODE HERE
+         function sayHello() {
+            // Retrieve the input element by its ID
+            var inputElement = document.getElementById("input");
+            var userName = inputElement.value;
+
+            // Update the output text to greet the user
+            var outputElement = document.getElementById("text");
+            outputElement.textContent = "Hello, " + userName;
+        }
          
 
          /* OPTIONAL PRACTICE: If you want more practice later, try taking multiple inputs from a user. For example,
